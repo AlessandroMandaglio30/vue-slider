@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CONTENITORE */
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgreen;
+}
+
+/* LATO SINISTRO */
+
+.slider {
+    width: 55%;
+    height: 60vh;
+}
+
+/* LATO DESTRO */
+
+.thumbnails {
+    width: 15%;
+    height: 60vh;
+    position: relative;
+}
+
+/* FORMATO IMG */
+
+.item {
+    height: 60vh;
+    display: none;
+    position: relative;
+} 
+
+.item img,
+.small img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+
+
+/* DIVISIONE IMG IN 5 */
+
+.thumbnails .small {
+    height: calc(60vh / 5); 
+    opacity: 0.5;
+    filter: blur(3px);
+}
+
+.sopra,
+.sotto{
+    color: white;
+    position: absolute;
+    left: 45%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background: rgba(0,0,0);
+    border-radius: 50%;
+    line-height: 31px;
+    cursor: pointer;
+}
+.sopra {
+    top: 1%;
+}
+
+.sotto {
+    bottom: 1%;
+}
+
+.items-container .active{
+    display: block;
+}
+
+.testo{
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    color: white;
+    text-align: right;
+}
+
+.thumbnails-container .active{
+    opacity: 1;
+    border-radius: 2px solid lightgray;
+    filter: blur(0);
+}
